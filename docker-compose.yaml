@@ -12,7 +12,7 @@ services:
       - flask
 
   flask:
-    image: "korolyovranext/flask:1.0"
+    image: "korolyovranext/flask:3.0"
     container_name: flask
     environment:
       - FLASK_DEBUG=True
@@ -34,4 +34,4 @@ services:
       - "5432:5432"
     volumes:
       - ./data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init/sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
